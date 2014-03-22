@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -32,6 +32,23 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+group :development, :test do
+  gem 'sqlite3', '1.3.8'
+  # rspec-rails includes RSpec itself in a wrapper to make it play nicely with Rails.
+  gem 'rspec-rails'
+  # replaces Rails' default fixtures for feeding test data to the test suite with much more preferable factories
+  gem 'factory_girl_rails'
+  # watches your application and tests and runs specs for you automatically when it detects changes.
+  gem 'guard-rspec'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
