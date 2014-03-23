@@ -4,9 +4,12 @@
 
 @import "./global/variables";
 
+.firstSection{
+    background-color: #FBFFFF;
+  }
 .mainContent {
   .thumbnails {
-      padding: 0 0 20px 0;
+      padding: 20px 0 20px 0;
       .mainText {
         font-size: 2.5em;
       }
@@ -64,6 +67,7 @@
 @media(min-width:500px){
   .mainContent {
     .thumbnails {
+      padding-top: 0;
       .steps{
         height:200px;
       }
