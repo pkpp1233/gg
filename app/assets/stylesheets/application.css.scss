@@ -11,3 +11,25 @@
  *= require_self
  *= require_tree .
  */
+
+@import "./global/variables";
+
+@import "helpers/utils";
+@import "helpers/color";
+@import "helpers/math";
+@import "helpers/pseudo-elements";
+@import "helpers/responsive";
+@import "helpers/type";
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  .gimme {
+    color: $gimmeColor;
+  }
+  .highlight {
+    color: $highlightColor;
+  }
+  .secondHighlight {
+    color: $secondHighlightColor;
+  }
+}

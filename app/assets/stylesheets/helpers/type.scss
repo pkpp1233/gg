@@ -1,0 +1,43 @@
+/*  -----------------------------------------------------------------------------
+  ::  Style application
+  ----------------------------------------------------------------------------- */
+@mixin old-style-figures{
+  -moz-font-feature-settings: "onum=1, pnum=1"; 
+  -ms-font-feature-settings: "onum", "pnum";
+  -webkit-font-feature-settings: "onum", "pnum";
+  -o-font-feature-settings: "onum", "pnum";
+  font-feature-settings: "onum", "pnum";
+}
+
+@mixin hide-text{
+  text-indent: -9999px;
+}
+
+@mixin truncate{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+/*  -----------------------------------------------------------------------------
+  ::  Selector Sets
+  ----------------------------------------------------------------------------- */
+
+@mixin type{
+  h1, h2, h3, h4, h5, h6, p{
+    @content;
+  }
+}
+
+@mixin header{
+  h1, h2, h3, h4, h5, h6{
+    @content;
+  }
+}
+
+@mixin bodyFont{
+  p, td, th{
+    @content;
+  }
+}

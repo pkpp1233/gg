@@ -1,0 +1,115 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "./global/variables";
+
+.mainContent {
+  .thumbnails {
+      padding: 0 0 20px 0;
+      .mainText {
+        font-size: 2.5em;
+      }
+      .steps{
+        height:100px;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:center;
+      }
+      #stepOne {
+        background-image: url('talk.png');
+      }
+      #stepTwo {
+        background-image: url('list.png');
+      }
+      #stepThree {
+        background-image: url('brain.jpg');
+      }
+      .title {
+        color: $defaultTextColor;
+        text-align: center;
+        h2 {
+          font-size: 2em;
+        }
+      }
+    }
+  text-align:center;
+    // background: white;
+    // border-bottom: 1px solid grey;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.2);
+    h1 {
+      font-size: 3em;
+    }
+    .lead {
+      font-size: 0.9em;
+    }
+    .thin {
+      font-weight: 300;
+    }
+    .topMargin {
+      margin: 15px 0 15px 0;
+      .startButton {
+        padding: 5px 20px;
+        background-color: $highlightColor;
+        border-color: $highlightColor;
+        border-radius: 40px;
+      }
+      .startButton:hover {
+        background-color: $secondHighlightColor;
+        border-color: $secondHighlightColor;
+      }
+    }
+  }
+@media(min-width:500px){
+  .mainContent {
+    .thumbnails {
+      .steps{
+        height:200px;
+      }
+      .title {
+        color: $defaultTextColor;
+        text-align: center;
+        h2 {
+          font-size: 3em;
+        }
+      }
+      .mainText {
+        font-size: 2.5em;
+      }
+    }
+    padding: 40px 0px 40px 0px;
+    h1 {
+      font-size: 8em;
+    }
+    .topMargin{
+      margin: 25px 0 25px 0;
+      .startButton {
+        padding: 12px 45px;
+      }
+    }
+  }
+}
+
+@media(min-width:992px){
+  .mainContent {
+    text-align: left;
+    h1 {
+      font-size: 12em;
+    }
+    .rightText{
+      padding: 120px 10% 10% 10%;
+    }
+  }
+}
+
+@media(min-width:1200px){
+  .mainContent {
+    h1 {
+      font-size: 14em;
+    }
+    .rightText{
+      padding: 180px 10% 10% 15%;
+    }
+  }
+}

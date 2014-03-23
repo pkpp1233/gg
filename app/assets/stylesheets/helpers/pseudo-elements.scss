@@ -1,0 +1,75 @@
+/*  -----------------------------------------------------------------------------
+  ::  Attach stylable block element Pseudo Classes to an object
+  ----------------------------------------------------------------------------- */
+
+@mixin before($content: ""){
+  position: relative;
+  &:before{
+    content: $content;
+    display: block;
+    position: absolute;
+    @content; 
+  }
+}
+
+@mixin after($content: ""){
+  position: relative;
+  &:after{
+    content: $content;
+    display: block;
+    position: absolute;
+    @content; 
+  }
+}
+
+
+
+/*
+Insert distinct elements into content
+ */
+@mixin mid-dot($margin: .25rem){
+  &:after{
+    content: "·";
+    color: $gs5;
+    margin: 0 $margin;
+    @content;
+  }
+}
+
+@mixin mid-dot-before($margin: .25rem){
+  &:before{
+    content: "·";
+    color: $gs5;
+    margin: 0 $margin;
+    @content;
+  }
+}
+
+@mixin icon($content: "attr(data-icon)"){
+  position: relative;
+  &:after{
+    -webkit-font-smoothing: antialiased;
+    font-family: $font-icon;
+    content: #{$content};
+    @content;
+  }
+}
+
+@mixin icon-before($content: "attr(data-icon)"){
+  position: relative;
+  &:before{
+    -webkit-font-smoothing: antialiased;
+    font-family: $font-icon;
+    content: #{$content};
+    @content;
+  }
+}
+
+@mixin mid-hr{
+  @include after{
+    top: 53%;
+    border-bottom: 1px solid $gs6;
+    width: 100%;
+    @content;
+  }
+}
