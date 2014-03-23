@@ -17,13 +17,13 @@
         background-position:center;
       }
       #stepOne {
-        background-image: url('talk.png');
+        background-image: asset_url('talk.png');
       }
       #stepTwo {
-        background-image: url('list.png');
+        background-image: asset_url('list.png');
       }
       #stepThree {
-        background-image: url('brain.jpg');
+        background-image: asset_url('brain.jpg');
       }
       .title {
         color: $defaultTextColor;
