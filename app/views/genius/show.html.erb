@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @geniu.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @geniu.last_name %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @geniu.string %>
+</p>
+
+<p>
+  <strong>Software:</strong>
+  <%= @geniu.software_id %>
+</p>
+
+<p>
+  <strong>Linkedin url:</strong>
+  <%= @geniu.linkedin_url %>
+</p>
+
+<%= link_to 'Edit', edit_geniu_path(@geniu) %> |
+<%= link_to 'Back', genius_path %>

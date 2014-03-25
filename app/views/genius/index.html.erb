@@ -1,0 +1,35 @@
+<h1>Listing genius</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>String</th>
+      <th>Software</th>
+      <th>Linkedin url</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genius.each do |geniu| %>
+      <tr>
+        <td><%= geniu.first_name %></td>
+        <td><%= geniu.last_name %></td>
+        <td><%= geniu.string %></td>
+        <td><%= geniu.software_id %></td>
+        <td><%= geniu.linkedin_url %></td>
+        <td><%= link_to 'Show', geniu %></td>
+        <td><%= link_to 'Edit', edit_geniu_path(geniu) %></td>
+        <td><%= link_to 'Destroy', geniu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Geniu', new_geniu_path %>

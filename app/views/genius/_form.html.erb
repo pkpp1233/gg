@@ -1,0 +1,37 @@
+<%= form_for(@geniu) do |f| %>
+  <% if @geniu.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@geniu.errors.count, "error") %> prohibited this geniu from being saved:</h2>
+
+      <ul>
+      <% @geniu.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :string %><br>
+    <%= f.text_field :string %>
+  </div>
+  <div class="field">
+    <%= f.label :software_id %><br>
+    <%= f.number_field :software_id %>
+  </div>
+  <div class="field">
+    <%= f.label :linkedin_url %><br>
+    <%= f.text_field :linkedin_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
