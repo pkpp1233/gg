@@ -7,6 +7,7 @@
 html,
 body {
   height: 100%;
+  font-family: 'Source Sans Pro', sans-serif !important;
   /* The html and body elements cannot have any padding or margin. */
   #wrap {
     min-height: 100%;
@@ -28,13 +29,14 @@ body {
           margin: 0;
           padding: 0;
           vertical-align: middle;
-          font-size: 1.8em;
+          font-size: 2em;
         }
       }
     }
 
     .firstSection{
         background-color: #FAFFFF;
+        padding-bottom: 0;
       }
     .mainContent {
 
@@ -74,11 +76,11 @@ body {
       text-align:center;
         // background: white;
         // border-bottom: 1px solid grey;
-        font-family: 'Source Sans Pro', sans-serif;
         box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.2);
         h1 {
           // line-height: 1em;
           font-size: 3em;
+          margin: 0;
         }
         .lead {
           font-size: 0.9em;
@@ -103,6 +105,7 @@ body {
 
     @media(min-width:500px){
       .mainContent {
+        padding-bottom: 0 !important;
         .thumbnails {
           padding-top: 0;
           .steps{
@@ -119,7 +122,7 @@ body {
             font-size: 2.5em;
           }
         }
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px;
         h1 {
           font-size: 8em;
         }
@@ -139,7 +142,7 @@ body {
           font-size: 12em;
         }
         .rightText{
-          padding: 120px 10% 10% 10%;
+          padding: 100px 10% 0 10%;
         }
       }
     }
@@ -150,7 +153,7 @@ body {
           font-size: 14em;
         }
         .rightText{
-          padding: 180px 10% 10% 15%;
+          padding: 160px 10% 0 15%;
         }
       }
     }
