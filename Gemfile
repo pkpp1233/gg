@@ -29,6 +29,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'websocket-rails'
+
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   # rspec-rails includes RSpec itself in a wrapper to make it play nicely with Rails.
