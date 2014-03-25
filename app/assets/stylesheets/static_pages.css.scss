@@ -4,123 +4,155 @@
 
 @import "./global/variables";
 
-.firstSection{
-    background-color: #FAFFFF;
-  }
-.mainContent {
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  #wrap {
+    min-height: 100%;
+    height: auto !important; 
+    height: 100%;
+    /* Negative indent footer by its height */
+    margin: 0 auto -$footerHeight;
 
-  .thumbnails {
-      padding: 20px 0 20px 0;
-      .mainText {
-        font-size: 2.5em;
-      }
-      .steps{
-        height:100px;
-        background-repeat:no-repeat;
-        background-size:contain;
-        background-position:center;
-      }
-      #stepOne {
-        background-image: asset_url('list.png');
-      }
-      #stepTwo {
-        background-image: asset_url('talk.png');
-      }
-      #stepThree {
-        background-image: asset_url('brain.jpg');
-      }
-      .title {
-        color: $defaultTextColor;
-        text-align: center;
-        h2 {
-          font-size: 2em;
+    /* Set the fixed height of the footer here */
+    #footer {
+      height: $footerHeight;
+      background-color: #525C73;
+      .text-footer {
+        margin: 0;
+      padding: 0;
+        .footer-white {
+          color: white;
+          line-height:$footerHeight;
+          margin: 0;
+          padding: 0;
+          vertical-align: middle;
+          font-size: 1.8em;
         }
       }
-      .footer {
-          margin-top: 0.5em; 
-          text-align: center;
-          font-size: 2.2em;
+    }
+
+    .firstSection{
+        background-color: #FAFFFF;
+      }
+    .mainContent {
+
+      .thumbnails {
+          padding: 20px 0 20px 0;
+          .mainText {
+            font-size: 2.5em;
+          }
+          .steps{
+            height:100px;
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+          }
+          #stepOne {
+            background-image: asset_url('list.png');
+          }
+          #stepTwo {
+            background-image: asset_url('talk.png');
+          }
+          #stepThree {
+            background-image: asset_url('brain.jpg');
+          }
+          .title {
+            color: $defaultTextColor;
+            text-align: center;
+            h2 {
+              font-size: 2em;
+            }
+          }
+          .caption {
+              margin-top: 0.5em; 
+              text-align: center;
+              font-size: 2.2em;
+            }
         }
-    }
-  text-align:center;
-    // background: white;
-    // border-bottom: 1px solid grey;
-    font-family: 'Source Sans Pro', sans-serif;
-    box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.2);
-    h1 {
-      // line-height: 1em;
-      font-size: 3em;
-    }
-    .lead {
-      font-size: 0.9em;
-    }
-    .thin {
-      font-weight: 300;
-    }
-    .topMargin {
-      margin: 15px 0 15px 0;
-      .startButton {
-        padding: 5px 20px;
-        background-color: $highlightColor;
-        border-color: $highlightColor;
-        border-radius: 40px;
-      }
-      .startButton:hover {
-        background-color: $secondHighlightColor;
-        border-color: $secondHighlightColor;
-      }
-    }
-  }
-@media(min-width:500px){
-  .mainContent {
-    .thumbnails {
-      padding-top: 0;
-      .steps{
-        height:200px;
-      }
-      .title {
-        color: $defaultTextColor;
-        text-align: center;
-        h2 {
+      text-align:center;
+        // background: white;
+        // border-bottom: 1px solid grey;
+        font-family: 'Source Sans Pro', sans-serif;
+        box-shadow: 0 16px 16px -16px rgba(0, 0, 0, 0.2);
+        h1 {
+          // line-height: 1em;
           font-size: 3em;
         }
+        .lead {
+          font-size: 0.9em;
+        }
+        .thin {
+          font-weight: 300;
+        }
+        .topMargin {
+          margin: 15px 0 15px 0;
+          .startButton {
+            padding: 5px 20px;
+            background-color: $highlightColor;
+            border-color: $highlightColor;
+            border-radius: 40px;
+          }
+          .startButton:hover {
+            background-color: $secondHighlightColor;
+            border-color: $secondHighlightColor;
+          }
+        }
       }
-      .mainText {
-        font-size: 2.5em;
-      }
-    }
-    padding: 40px 0px 40px 0px;
-    h1 {
-      font-size: 8em;
-    }
-    .topMargin{
-      margin: 25px 0 25px 0;
-      .startButton {
-        padding: 12px 45px;
-      }
-    }
-  }
-}
 
-@media(min-width:992px){
-  .mainContent {
-    text-align: left;
-    h1 {
-      font-size: 12em;
+    @media(min-width:500px){
+      .mainContent {
+        .thumbnails {
+          padding-top: 0;
+          .steps{
+            height:200px;
+          }
+          .title {
+            color: $defaultTextColor;
+            text-align: center;
+            h2 {
+              font-size: 3em;
+            }
+          }
+          .mainText {
+            font-size: 2.5em;
+          }
+        }
+        padding: 40px 0px 40px 0px;
+        h1 {
+          font-size: 8em;
+        }
+        .topMargin{
+          margin: 25px 0 25px 0;
+          .startButton {
+            padding: 12px 45px;
+          }
+        }
+      }
     }
-    .rightText{
-      padding: 120px 10% 10% 10%;
-    }
-  }
-}
 
-@media(min-width:1200px){
-  .mainContent {
-    h1 {
-      font-size: 14em;
+    @media(min-width:992px){
+      .mainContent {
+        text-align: left;
+        h1 {
+          font-size: 12em;
+        }
+        .rightText{
+          padding: 120px 10% 10% 10%;
+        }
+      }
     }
-    .rightText{
-      padding: 180px 10% 10% 15%;
+
+    @media(min-width:1200px){
+      .mainContent {
+        h1 {
+          font-size: 14em;
+        }
+        .rightText{
+          padding: 180px 10% 10% 15%;
+        }
+      }
     }
   }
 }
